@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>App Redirection</title>
+        <script type="text/javascript">
+            // Script for device detection and redirection
+            window.onload = function() {
+                var ua = navigator.userAgent.toLowerCase();
+                var url;
+                if (ua.indexOf("android") > -1) {
+                    // Android device detected, redirect to Google Play Store
+                   // url = "https://play.google.com/store/apps/details?id=<your_app_id>";
+                  url = "https://verbum.hr/7-navika-uspjesnih-ljudi-2043";
+                } else if (ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1) {
+                    // iOS device detected, redirect to Apple App Store
+                   // url = "https://apps.apple.com/app/id<your_app_id>";
+                     url = "https://verbum.hr/stvoreni-za-velicinu";
+                } else {
+                    // Other device, redirect to a fallback page if needed
+                    url = "<fallback_url>";
+                }
+                window.location.href = url;
+            }
+        </script>
+    </head>
+    <body></body>
+</html>
